@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: |
           #cd backend
-          pip install -r backend/requirements.txt
+          #pip install -r backend/requirements.txt
 
       # Optional: Add step to run tests here
 
@@ -78,6 +78,7 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DF64EC425C23460A9EA7741954B91A3C }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
+
 
 
 
