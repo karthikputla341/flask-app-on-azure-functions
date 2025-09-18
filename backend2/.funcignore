@@ -1,0 +1,39 @@
+# Ignore local virtual environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore logs
+*.log
+
+# Ignore local settings / environment files
+.env
+local_settings.py
+local.settings.json
+
+# Ignore editor/project files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Keep the function app and dependencies
+!v1/
+!app.py
+!requirements.txt
+!host.json
+!nlp_comparison.py
+!sample_docs/
