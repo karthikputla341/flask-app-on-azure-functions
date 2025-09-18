@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: './backend3' # set this to the path to your web app project, defaults to the repository root
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
   PYTHON_VERSION: '3.11' # set this to the python version to use (supports 3.6, 3.7, 3.8)
 
 jobs:
@@ -35,9 +35,7 @@ jobs:
           source venv/bin/activate
 
       - name: Install dependencies
-        run: |
-          #cd backend
-          #pip install -r backend/requirements.txt
+        run: pip install -r requirements.txt
 
       # Optional: Add step to run tests here
 
@@ -74,15 +72,4 @@ jobs:
           app-name: 'Static132135'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DF64EC425C23460A9EA7741954B91A3C }}
-          scm-do-build-during-deployment: true
-          enable-oryx-build: true
-
-
-
-
-
-
-
-
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DCE344723FA44EB2B073A34CAA056A60 }}
