@@ -35,7 +35,9 @@ jobs:
           source venv/bin/activate
 
       - name: Install dependencies
-        run: pip install -r backend/requirements.txt
+        run: |
+          cd backend
+          pip install -r requirements.txt
 
       # Optional: Add step to run tests here
 
@@ -74,3 +76,4 @@ jobs:
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
 
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DF64EC425C23460A9EA7741954B91A3C }}
+
